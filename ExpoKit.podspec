@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
     ss.dependency 'CocoaLumberjack', '~> 3.2.1'
     ss.dependency 'Crashlytics', '~> 3.8'
     ss.dependency 'FBAudienceNetwork', '4.99.0'
-    ss.dependency 'FBSDKCoreKit', '~> 4.28'
-    ss.dependency 'FBSDKLoginKit', '~> 4.28'
-    ss.dependency 'FBSDKShareKit', '~> 4.28'
+    ss.dependency 'FBSDKCoreKit', '5.6.0'
+    ss.dependency 'FBSDKLoginKit', '5.6.0'
+    ss.dependency 'FBSDKShareKit', '5.6.0'
     ss.dependency 'Fabric', '~> 1.6'
     ss.dependency 'GoogleSignIn', '~> 3.0'
     ss.dependency 'GoogleMaps', '~> 2.5.0'
@@ -48,11 +48,11 @@ Pod::Spec.new do |s|
     ss.dependency 'EXConstantsInterface'
   end
 
-  s.subspec "Payments" do |ss|
-    ss.dependency "ExpoKit/Core"
-    ss.dependency 'Stripe', '~> 10.1.0'
-    ss.source_files = 'ios/Exponent/Versioned/Optional/Payments/*.{h,m}'
-  end
+  # s.subspec "Payments" do |ss|
+  #   ss.dependency "ExpoKit/Core"
+  #   ss.dependency 'Stripe', '~> 10.1.0'
+  #   ss.source_files = 'ios/Exponent/Versioned/Optional/Payments/*.{h,m}'
+  # end
 
   s.subspec "AR" do |ss|
     ss.dependency "ExpoKit/Core"
