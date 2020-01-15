@@ -19,15 +19,18 @@ Pod::Spec.new do |s|
     ss.preserve_paths = "ios/Exponent/**/*.{h,m}"
     ss.exclude_files = "ios/Exponent/Supporting/**", "ios/Exponent/Versioned/Optional/**/*.{h,m}"
 
+    # mods
+    ss.dependency 'FBSDKCoreKit', '5.6.0'
+    ss.dependency 'FBSDKLoginKit', '5.6.0'
+    ss.dependency 'FBSDKShareKit', '5.6.0'
+    # ss.dependency 'Google-Mobile-Ads-SDK', '~> 7.22.0'
+
     ss.dependency 'Amplitude-iOS', '~> 3.8'
     ss.dependency 'Analytics', '~> 3.5'
     ss.dependency 'AppAuth', '~> 0.4'
     ss.dependency 'CocoaLumberjack', '~> 3.2.1'
     ss.dependency 'Crashlytics', '~> 3.8'
     ss.dependency 'FBAudienceNetwork', '5.1.1'
-    ss.dependency 'FBSDKCoreKit', '5.6.0'
-    ss.dependency 'FBSDKLoginKit', '5.6.0'
-    ss.dependency 'FBSDKShareKit', '5.6.0'
     ss.dependency 'Fabric', '~> 1.6'
     ss.dependency 'GoogleSignIn', '~> 4.1'
     ss.dependency 'GoogleMaps', '~> 2.5.0'
@@ -35,7 +38,6 @@ Pod::Spec.new do |s|
     ss.dependency 'lottie-ios', '~> 2.5.0'
     ss.dependency 'JKBigInteger2', '0.0.5'
     ss.dependency 'Branch', '~> 0.24.2'
-    # ss.dependency 'Google-Mobile-Ads-SDK', '~> 7.22.0'
     ss.dependency 'React' # explicit dependency required for CocoaPods >= 1.5.0
 
     # Universal modules required by ExpoKit so the code compiles
@@ -48,18 +50,18 @@ Pod::Spec.new do |s|
     ss.dependency 'UMConstantsInterface'
   end
 
-  s.subspec "Payments" do |ss|
-    ss.dependency "ExpoKit/Core"
-    ss.dependency 'Stripe', '~> 10.1.0'
-    ss.source_files = 'ios/Exponent/Versioned/Optional/Payments/*.{h,m}'
-  end
+  # s.subspec "Payments" do |ss|
+  #   ss.dependency "ExpoKit/Core"
+  #   ss.dependency 'Stripe', '~> 10.1.0'
+  #   ss.source_files = 'ios/Exponent/Versioned/Optional/Payments/*.{h,m}'
+  # end
 
   s.subspec "AR" do |ss|
     ss.dependency "ExpoKit/Core"
     ss.source_files = 'ios/Exponent/Versioned/Optional/ARKit/**'
   end
 
-  s.subspec "FaceDetector" do |ss|
-    ss.dependency "EXFaceDetector"
-  end
+  # s.subspec "FaceDetector" do |ss|
+  #   ss.dependency "EXFaceDetector"
+  # end
 end
